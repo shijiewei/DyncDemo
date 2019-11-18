@@ -1,0 +1,6 @@
+include ':app',':DyCTools', ':AccessMDC', ':CltSMDC'
+rootProject.name='DyncDemo'
+
+project(':DyCTools').projectDir = new File(settingsDir, '../../youzu/svn/DynaFuc/trunk/DyCTools')
+project(':AccessMDC').projectDir = new File(settingsDir, '../../youzu/svn/DynaFuc/trunk/AccessMDC')
+project(':CltSMDC').projectDir = new File(settingsDir, '../../youzu/svn/DynaFuc/trunk/CltSMDC')
