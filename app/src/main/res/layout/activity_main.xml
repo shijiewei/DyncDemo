@@ -5,14 +5,14 @@
 	android:gravity="center"
 	android:orientation="vertical">
 	<Button
-		android:id="@+id/btn1"
+		android:id="@+id/btn_access_mdc"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="test"/>
+		android:text="初始化入口mdc"/>
 	<Button
-		android:id="@+id/btn2"
+		android:id="@+id/btn_clts_mdc"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="test2"/>
+		android:text="初始化业务mdc"/>
 
 </LinearLayout>

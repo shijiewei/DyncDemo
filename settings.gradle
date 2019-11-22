@@ -1,6 +1,8 @@
-include ':app',':DyCTools', ':AccessMDC', ':CltSMDC'
+include ':app',':DyCTools', ':AccessMDC', ':CltSMDC', ':MobCommons', ':MobTools'
 rootProject.name='DyncDemo'
 
 project(':DyCTools').projectDir = new File(settingsDir, '../../youzu/svn/DynaFuc/trunk/DyCTools')
 project(':AccessMDC').projectDir = new File(settingsDir, '../../youzu/svn/DynaFuc/trunk/AccessMDC')
 project(':CltSMDC').projectDir = new File(settingsDir, '../../youzu/svn/DynaFuc/trunk/CltSMDC')
+project(':MobCommons').projectDir = new File(settingsDir, '../../youzu/gitlab/MobLogCollector')
+project(':MobTools').projectDir = new File(settingsDir, '../../youzu/gitlab/ShareSDKTools')
