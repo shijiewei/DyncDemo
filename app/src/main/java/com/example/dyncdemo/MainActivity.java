@@ -10,9 +10,11 @@ import android.view.View;
 
 import com.mdc.AccessMDC;
 import com.mdc.CltSMDC;
+import com.mdc.at.sdcs.DUClt;
 import com.mob.MobSDK;
-import com.mob.at.utils.Hashon;
 import com.mob.commons.authorize.DeviceAuthorizer;
+import com.mob.commons.oaid.FidsSDK;
+import com.mob.tools.utils.Hashon;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,7 +29,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		setContentView(R.layout.activity_main);
 		hashon = new Hashon();
 		checkPermissions();
-//		initMobCommons();
+		initMobCommons();
 		initView();
 		checkDuid();
 	}
@@ -44,12 +46,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				initCltsMdc();
 				break;
 			}
+			case R.id.btn_test_mdc: {
+				testMdc();
+				break;
+			}
 		}
 	}
 
 	private void initView() {
 		findViewById(R.id.btn_access_mdc).setOnClickListener(this);
 		findViewById(R.id.btn_clts_mdc).setOnClickListener(this);
+		findViewById(R.id.btn_test_mdc).setOnClickListener(this);
 	}
 
 	private void initAccessMdc() {
@@ -98,5 +105,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		if (TextUtils.isEmpty(duid)) {
 			duid = "test_duid_jackie";
 		}
+	}
+
+	private void testMdc() {
+		DUClt.start(this, FidsSDK.getOAID(this), "test_duid", "fe0614078730");
 	}
 }

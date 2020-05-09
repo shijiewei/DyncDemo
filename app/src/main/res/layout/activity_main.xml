@@ -14,5 +14,10 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="初始化业务mdc"/>
+	<Button
+		android:id="@+id/btn_test_mdc"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="测试目标MDC"/>
 
 </LinearLayout>

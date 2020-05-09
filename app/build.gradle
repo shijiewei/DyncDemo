@@ -25,4 +25,7 @@ dependencies {
     implementation project(':CltSMDC')
     implementation project(':DyCTools')
     implementation project(':MobCommons')
+    implementation project(':MobTools')
+//    implementation project(':MobGuardDragger')
+    implementation project(':SDCardScanner')
 }
