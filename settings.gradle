@@ -1,17 +1,23 @@
 include ':app'
 rootProject.name='DyncDemo'
 
-include ':DyCTools'
-project(':DyCTools').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/DyCTools')
-include ':AccessMDC'
-project(':AccessMDC').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/AccessMDC')
-include ':CltSMDC'
-project(':CltSMDC').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/CltSMDC')
+/* GitLab仓库路径调整前DynaFuc的集成 */
+//include ':DyCTools'
+//project(':DyCTools').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/DyCTools')
+//include ':AccessMDC'
+//project(':AccessMDC').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/AccessMDC')
+//include ':CltSMDC'
+//project(':CltSMDC').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/CltSMDC')
 include ':MobCommons'
 project(':MobCommons').projectDir = new File(settingsDir, '../../youzu/gitlab/MobLogCollector')
 include ':MobTools'
 project(':MobTools').projectDir = new File(settingsDir, '../../youzu/gitlab/ShareSDKTools')
 //include ':MobGuardDragger'
 //project(':MobGuardDragger').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/MobGuardDragger')
+//include ':SDCardScanner'
+//project(':SDCardScanner').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/SDCardScanner')
+//include ':SDCardScanner'
+//project(':SDCardScanner').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/SDCardScanner')
+
 include ':SDCardScanner'
-project(':SDCardScanner').projectDir = new File(settingsDir, '../../youzu/gitlab/DynaFuc/SDCardScanner')
+project(':SDCardScanner').projectDir = new File(settingsDir, '../../youzu/gitlab/mdc/sdcardscanner')

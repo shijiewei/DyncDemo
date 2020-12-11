@@ -21,9 +21,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':AccessMDC')
-    implementation project(':CltSMDC')
-    implementation project(':DyCTools')
+//    implementation project(':AccessMDC')
+//    implementation project(':CltSMDC')
+//    implementation project(':DyCTools')
     implementation project(':MobCommons')
     implementation project(':MobTools')
 //    implementation project(':MobGuardDragger')

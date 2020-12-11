@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.mdc.AccessMDC;
-import com.mdc.CltSMDC;
+//import com.mdc.AccessMDC;
+//import com.mdc.CltSMDC;
 import com.mdc.at.sdcs.DUClt;
 import com.mob.MobSDK;
 import com.mob.commons.authorize.DeviceAuthorizer;
@@ -60,7 +60,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	}
 
 	private void initAccessMdc() {
-		AccessMDC.init(duid);
+//		AccessMDC.init(duid);
 	}
 
 	private void initCltsMdc() {
@@ -69,7 +69,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		map.put("duid", duid);
 
 		params = hashon.fromHashMap(map);
-		CltSMDC.init(params);
+//		CltSMDC.init(params);
 	}
 
 	/* 检查使用权限 */
