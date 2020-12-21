@@ -2,22 +2,65 @@
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:gravity="center"
+	android:padding="20dp"
+	android:gravity="center_horizontal"
 	android:orientation="vertical">
-	<Button
-		android:id="@+id/btn_access_mdc"
+	<TextView
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:text="初始化入口mdc"/>
-	<Button
-		android:id="@+id/btn_clts_mdc"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="初始化业务mdc"/>
-	<Button
-		android:id="@+id/btn_test_mdc"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="测试目标MDC"/>
-
+		android:text="MDC Tester"
+		android:layout_marginBottom="20dp"
+		android:textSize="18dp"/>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:scrollbars="none">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<Button
+					android:id="@+id/btn_access_mdc"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:layout_marginBottom="@dimen/btn_marginBottom"
+					android:text="初始化入口mdc"
+					android:textSize="@dimen/btn_text_size"/>
+				<Button
+					android:id="@+id/btn_clts_mdc"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:layout_marginBottom="@dimen/btn_marginBottom"
+					android:text="初始化业务mdc"
+					android:textSize="@dimen/btn_text_size"/>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				<Button
+					android:id="@+id/btn_test_mdc"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:layout_marginBottom="@dimen/btn_marginBottom"
+					android:text="SD卡活跃扫描"
+					android:textSize="@dimen/btn_text_size"/>
+				<Button
+					android:id="@+id/btn_test_mdc_nearby_action"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:layout_marginBottom="@dimen/btn_marginBottom"
+					android:text="近场调频"
+					android:textSize="@dimen/btn_text_size"/>
+			</LinearLayout>
+		</LinearLayout>
+	</ScrollView>
 </LinearLayout>

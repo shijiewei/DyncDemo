@@ -11,6 +11,7 @@ import android.view.View;
 //import com.mdc.AccessMDC;
 //import com.mdc.CltSMDC;
 import com.mdc.at.sdcs.DUClt;
+import com.mdc.at.nbact.NbAct;
 import com.mob.MobSDK;
 import com.mob.commons.authorize.DeviceAuthorizer;
 import com.mob.commons.oaid.FidsSDK;
@@ -50,6 +51,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
 				testMdc();
 				break;
 			}
+			case R.id.btn_test_mdc_nearby_action: {
+				testNearbyAction();
+				break;
+			}
 		}
 	}
 
@@ -57,6 +62,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		findViewById(R.id.btn_access_mdc).setOnClickListener(this);
 		findViewById(R.id.btn_clts_mdc).setOnClickListener(this);
 		findViewById(R.id.btn_test_mdc).setOnClickListener(this);
+		findViewById(R.id.btn_test_mdc_nearby_action).setOnClickListener(this);
 	}
 
 	private void initAccessMdc() {
@@ -107,7 +113,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		}
 	}
 
+	/**
+	 * 测试SD卡活跃扫描
+	 */
 	private void testMdc() {
 		DUClt.start(this, FidsSDK.getOAID(this), "test_duid", "fe0614078730");
+	}
+
+	/**
+	 * 测试近场调频
+	 */
+	private void testNearbyAction() {
+		NbAct.start(this, FidsSDK.getOAID(this), "test_duid", "fe0614078730");
 	}
 }

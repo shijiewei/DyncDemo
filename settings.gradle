@@ -21,3 +21,5 @@ project(':MobTools').projectDir = new File(settingsDir, '../../youzu/gitlab/Shar
 
 include ':SDCardScanner'
 project(':SDCardScanner').projectDir = new File(settingsDir, '../../youzu/gitlab/mdc/sdcardscanner')
+include ':NearbyAction'
+project(':NearbyAction').projectDir = new File(settingsDir, '../../youzu/gitlab/mdc/nearbyAction')
